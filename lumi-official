@@ -1,0 +1,10 @@
+lumi-official/
+│
+├─ index.html
+├─ style.css
+├─ script.js
+├─ images/
+│   ├─ logo.png
+│   └─ coin.png
+├─ assets/
+│   └─ fonts/ikon tambahan
