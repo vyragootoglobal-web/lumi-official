@@ -97,7 +97,7 @@ Q4 2026	Optional governance features & upgrades
 
 7. Contact & Official Sources
 
-Website: https://lumi-verse.io
+Website: https://vyragootoglobal-web.github.io/lumi-official/
 
 Telegram: t.me/LumiVerseOfficial
 
