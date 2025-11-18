@@ -3,27 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LUMI Verse</title>
+<title>LUMI Verse - Gold Premium Token</title>
 <link rel="icon" href="lumi-token.png" type="image/png">
 <style>
-  /* ===== Reset & Basic ===== */
   * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
   body { background:#0b0b0b; color:#fff;}
-  a { color:#00ffea; text-decoration:none;}
-  header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#111;}
+  a { color:#FFD700; text-decoration:none;}
+  header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#111; border-bottom:2px solid #FFD700;}
   header img { height:50px; }
   nav ul { list-style:none; display:flex; gap:20px; }
-  nav ul li { display:inline; }
+  nav ul li a:hover { color:#fff; }
   .hamburger { display:none; flex-direction:column; cursor:pointer; }
-  .hamburger div { width:25px; height:3px; background:#00ffea; margin:4px 0; }
+  .hamburger div { width:25px; height:3px; background:#FFD700; margin:4px 0; }
   @media(max-width:768px){
     nav ul { display:none; flex-direction:column; background:#111; position:absolute; top:70px; right:20px; padding:10px; border-radius:8px; }
     nav ul.show { display:flex; }
     .hamburger { display:flex; }
   }
-  main { padding:20px; max-width:900px; margin:0 auto; }
-  .btn { background:#00ffea; color:#000; padding:10px 20px; border-radius:5px; font-weight:bold; margin-top:20px; display:inline-block; }
-  footer { text-align:center; padding:20px; background:#111; margin-top:40px; }
+  main { padding:20px; max-width:1200px; margin:0 auto; }
+  .btn { background:#FFD700; color:#000; padding:10px 20px; border-radius:5px; font-weight:bold; margin-top:20px; display:inline-block; transition:0.3s;}
+  .btn:hover { background:#fff; color:#FFD700; }
+  section { margin-top:60px; padding-bottom:40px; border-bottom:1px solid #444; }
+  h1,h2,h3 { color:#FFD700; }
+  footer { text-align:center; padding:20px; background:#111; border-top:2px solid #FFD700; margin-top:40px; }
+  .team-member { display:flex; gap:15px; align-items:center; margin-top:15px; }
+  .team-member img { width:60px; border-radius:50%; border:2px solid #FFD700; }
+  .chart-placeholder { height:200px; background:#222; display:flex; align-items:center; justify-content:center; color:#888; margin-top:10px; }
+  html { scroll-behavior: smooth; } /* smooth scroll */
 </style>
 </head>
 <body>
@@ -33,9 +39,17 @@
   <nav>
     <ul id="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#token">Token</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="#whitepaper">Whitepaper</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#tokenomics">Tokenomics</a></li>
+      <li><a href="#howtobuy">How to Buy</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#community">Community</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#price">Price</a></li>
     </ul>
   </nav>
   <div class="hamburger" id="hamburger">
@@ -48,33 +62,115 @@
 <main>
   <section id="home">
     <h1>Welcome to LUMI Verse</h1>
-    <p>LUMI Verse adalah token langka GOLD PREMIUM di jaringan Polygon. Multi-chain ready dan siap untuk komunitas global.</p>
+    <p>LUMI Verse is a rare GOLD PREMIUM token, Multi-chain C, designed for long-term investment and community-driven utility.</p>
     <img src="lumi-token.png" alt="LUMI Logo" style="max-width:150px; margin-top:20px;">
+    <div style="margin-top:20px;">
+      <a href="whitepaper.pdf" class="btn" target="_blank">Download Whitepaper</a>
+    </div>
   </section>
 
-  <section id="token" style="margin-top:40px;">
-    <h2>Token Info</h2>
-    <ul>
-      <li>Total Supply: 17,000,000 LUMI</li>
-      <li>Blockchain: Polygon</li>
-      <li>Purpose: Gold Token, Long-term Investment, Multi-chain</li>
-    </ul>
+  <section id="about">
+    <h2>About Us / Team</h2>
+    <p>Our mission is to create a premium, multi-chain token ecosystem that empowers the community.</p>
+    <div class="team-member">
+      <img src="lumi-token.png" alt="Team Member">
+      <div>
+        <strong>Founder Name</strong><br>
+        CEO & Lead Developer<br>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="team-member">
+      <img src="lumi-token.png" alt="Team Member">
+      <div>
+        <strong>Co-Founder</strong><br>
+        Blockchain & Smart Contract<br>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
   </section>
 
-  <section id="whitepaper" style="margin-top:40px;">
+  <section id="whitepaper">
     <h2>Whitepaper</h2>
-    <p>Download whitepaper resmi LUMI Verse:</p>
+    <p>Get detailed insights about LUMI Verse Multi-chain C ecosystem, tokenomics, roadmap, and utility.</p>
     <a href="whitepaper.pdf" class="btn" target="_blank">Download PDF</a>
   </section>
 
-  <section id="contact" style="margin-top:40px;">
-    <h2>Contact & Social</h2>
-    <p>Join our community on Telegram, Discord, X:</p>
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>Q1 2025: Project Launch & Token Creation</li>
+      <li>Q2 2025: DEX Listing & Community Growth</li>
+      <li>Q3 2025: Web Layer Beta Release</li>
+      <li>Q4 2025: Node Launch & LUMI Chain Open-source</li>
+    </ul>
+  </section>
+
+  <section id="tokenomics">
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>Total Supply: 17,000,000 LUMI</li>
+      <li>Team: 10%</li>
+      <li>Community: 50%</li>
+      <li>Staking / Rewards: 30%</li>
+      <li>Reserve / Future: 10%</li>
+    </ul>
+    <div class="chart-placeholder">[Pie Chart Placeholder]</div>
+  </section>
+
+  <section id="howtobuy">
+    <h2>How to Buy</h2>
+    <ol>
+      <li>Install Metamask / compatible wallet</li>
+      <li>Connect to Polygon network</li>
+      <li>Swap ETH / USDT for LUMI on supported DEX</li>
+    </ol>
+  </section>
+
+  <section id="news">
+    <h2>News / Blog</h2>
+    <ul>
+      <li>2025-01-01: LUMI Verse Project Launch</li>
+      <li>2025-03-15: First DEX Listing</li>
+      <li>2025-06-10: Web Layer Beta Release</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p><strong>Q:</strong> What is LUMI Verse?<br>
+       <strong>A:</strong> LUMI Verse is a gold premium multi-chain token designed for community utility and investment.</p>
+    <p><strong>Q:</strong> How can I run a node?<br>
+       <strong>A:</strong> Node setup instructions available in our GitHub repository.</p>
+  </section>
+
+  <section id="community">
+    <h2>Community</h2>
     <ul>
       <li><a href="#">Telegram</a></li>
       <li><a href="#">Discord</a></li>
-      <li><a href="#">X</a></li>
+      <li><a href="#">X / Twitter</a></li>
+      <li><a href="#">GitHub</a></li>
     </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact / Support</h2>
+    <p>Email: support@lumiverse.io</p>
+  </section>
+
+  <section id="security">
+    <h2>Security Features</h2>
+    <ul>
+      <li>Smart contract audited</li>
+      <li>Node security & backup</li>
+      <li>Transaction protection</li>
+    </ul>
+  </section>
+
+  <section id="price">
+    <h2>Price Tracker</h2>
+    <div class="chart-placeholder">[Live Price Widget Placeholder]</div>
   </section>
 </main>
 
@@ -83,11 +179,28 @@
 </footer>
 
 <script>
-  // Hamburger menu toggle
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
+
+  // Toggle navbar hamburger
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
+  });
+
+  // Smooth scroll & auto-close hamburger on mobile
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault(); // prevent default anchor jump
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      if(targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Close navbar on mobile after click
+      if(navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+      }
+    });
   });
 </script>
 
