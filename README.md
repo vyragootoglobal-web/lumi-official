@@ -1,4 +1,4 @@
-# LUMI — LumiVerse (Whitepaper)
+# LUMI — Lumi Zenith Verse (Whitepaper)
 
 **Total Supply:** 20,000,000 LUMI
 **Contract:** 0x09D85bD22E3d0EbfBCd09166d01Ff880fF14a97b (Polygon)
