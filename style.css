@@ -1,0 +1,7 @@
+body{font-family:system-ui,Arial,sans-serif;margin:0;color:#111;background:#f8f9fb}
+.hero{background:#081428;color:white;padding:40px;text-align:center}
+.logo{width:80px;height:80px}
+.container{padding:24px;max-width:980px;margin:0 auto}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:#ffd700;color:#081428;text-decoration:none;margin:6px}
+.btn.ghost{background:transparent;border:1px solid #ffd700;color:#ffd700}
+code{background:#eef;padding:4px;border-radius:4px}
