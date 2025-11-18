@@ -1,64 +1,95 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LUMI — LumiVerse</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMI Verse</title>
+<link rel="icon" href="lumi-token.png" type="image/png">
+<style>
+  /* ===== Reset & Basic ===== */
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+  body { background:#0b0b0b; color:#fff;}
+  a { color:#00ffea; text-decoration:none;}
+  header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#111;}
+  header img { height:50px; }
+  nav ul { list-style:none; display:flex; gap:20px; }
+  nav ul li { display:inline; }
+  .hamburger { display:none; flex-direction:column; cursor:pointer; }
+  .hamburger div { width:25px; height:3px; background:#00ffea; margin:4px 0; }
+  @media(max-width:768px){
+    nav ul { display:none; flex-direction:column; background:#111; position:absolute; top:70px; right:20px; padding:10px; border-radius:8px; }
+    nav ul.show { display:flex; }
+    .hamburger { display:flex; }
+  }
+  main { padding:20px; max-width:900px; margin:0 auto; }
+  .btn { background:#00ffea; color:#000; padding:10px 20px; border-radius:5px; font-weight:bold; margin-top:20px; display:inline-block; }
+  footer { text-align:center; padding:20px; background:#111; margin-top:40px; }
+</style>
 </head>
 <body>
-  <header class="hero">
-    <img src="logo-lumi.png" alt="LUMI Logo" class="logo" />
-    <h1>LUMI — LumiVerse</h1>
-    <p>Gold premium token on Polygon — Supply: 20,000,000</p>
-    <div class="actions">
-      <a href="#buy" class="btn">Buy on QuickSwap</a>
-      <a href="#whitepaper" class="btn ghost">Whitepaper</a>
-    </div>
-  </header>
 
-  <main class="container">
-    <section id="about">
-      <h2>About LUMI</h2>
-      <p>LUMI is a rare gold-premium token designed to be long-term store-of-value on Polygon network. Total supply: <strong>20,000,000 LUMI</strong>.</p>
-    </section>
+<header>
+  <img src="lumi-token.png" alt="LUMI Logo">
+  <nav>
+    <ul id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#token">Token</a></li>
+      <li><a href="#whitepaper">Whitepaper</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
 
-    <section id="token-info">
-      <h3>Token Info</h3>
-      <ul>
-        <li>Contract: <code id="contract">0x09D85bD22E3d0EbfBCd09166d01Ff880fF14a97b</code> <button id="copy">Copy</button></li>
-        <li>Network: Polygon (MATIC)</li>
-        <li>Decimals: 18</li>
-        <li>Total Supply: 20,000,000</li>
-      </ul>
-    </section>
+<main>
+  <section id="home">
+    <h1>Welcome to LUMI Verse</h1>
+    <p>LUMI Verse adalah token langka GOLD PREMIUM di jaringan Polygon. Multi-chain ready dan siap untuk komunitas global.</p>
+    <img src="lumi-token.png" alt="LUMI Logo" style="max-width:150px; margin-top:20px;">
+  </section>
 
-    <section id="price">
-      <h3>Live Price</h3>
-      <div id="price-widget">Price widget loading...</div>
-      <p><small>Chart data from DexScreener — loading may take a few seconds.</small></p>
-    </section>
+  <section id="token" style="margin-top:40px;">
+    <h2>Token Info</h2>
+    <ul>
+      <li>Total Supply: 17,000,000 LUMI</li>
+      <li>Blockchain: Polygon</li>
+      <li>Purpose: Gold Token, Long-term Investment, Multi-chain</li>
+    </ul>
+  </section>
 
-    <section id="whitepaper">
-      <h3>Whitepaper</h3>
-      <p>Download the full whitepaper in PDF or read online.</p>
-      <a href="whitepaper.md" class="btn">Read Whitepaper (MD)</a>
-    </section>
+  <section id="whitepaper" style="margin-top:40px;">
+    <h2>Whitepaper</h2>
+    <p>Download whitepaper resmi LUMI Verse:</p>
+    <a href="whitepaper.pdf" class="btn" target="_blank">Download PDF</a>
+  </section>
 
-    <section id="links">
-      <h3>Links</h3>
-      <ul>
-        <li><a href="https://polygonscan.com/token/0x09D85bD22E3d0EbfBCd09166d01Ff880fF14a97b" target="_blank">Polygonscan</a></li>
-        <li><a href="#">Telegram</a></li>
-        <li><a href="#">X (Twitter)</a></li>
-      </ul>
-    </section>
-  </main>
+  <section id="contact" style="margin-top:40px;">
+    <h2>Contact & Social</h2>
+    <p>Join our community on Telegram, Discord, X:</p>
+    <ul>
+      <li><a href="#">Telegram</a></li>
+      <li><a href="#">Discord</a></li>
+      <li><a href="#">X</a></li>
+    </ul>
+  </section>
+</main>
 
-  <footer>
-    <p>© LUMI — LumiVerse</p>
-  </footer>
+<footer>
+  &copy; 2025 LUMI Verse. All rights reserved.
+</footer>
 
-  <script src="app.js"></script>
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
