@@ -1,193 +1,25 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>LUMI-VERSE — Gold-backed Token & Network</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>LUMI Token</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="container">
-    <div class="brand">
-      <img src="lumi-token.png" alt="LUMI logo">
-      <div>
-        <div class="title">LUMI — Gold-backed Token</div>
-        <div class="sub">Melampaui Blok — LUMI adalah token gold digital, publik & komunitas-driven</div>
-      </div>
-    </div>
+<nav>
+  <img src="lumi-token.png" alt="LUMI Logo" class="logo">
+  <button id="hamburger">☰</button>
+  <ul id="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="whitepaper.md">Whitepaper</a></li>
+    <li><a href="#dashboard">Dashboard</a></li>
+  </ul>
+</nav>
 
-    <nav class="mainmenu">
-      <a href="#dashboard">Dashboard</a>
-      <a href="#network">Jaringan</a>
-      <a href="#features">Features</a>
-      <a href="#whitepaper" id="whitepaperLink">Whitepaper</a>
-      <a href="#wallets">Wallets</a>
-      <a href="#explorer">Explorer</a>
-      <a href="#news">News</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <div class="hero-left">
-      <h1 class="h-title">LUMI-VERSE GOLD NETWORK</h1>
-      <p class="h-sub">LUMI adalah token gold-backed di Polygon — kelangkaan 17 juta token, didukung emas fisik, dirancang untuk stabilitas & adopsi jangka panjang.</p>
-
-      <div class="meta-row">
-        <div class="meta-box">
-          <div class="val" id="meta-price">$2.45</div>
-          <div class="label">LUMI Price</div>
-        </div>
-        <div class="meta-box">
-          <div class="val" id="meta-holders">5.3K</div>
-          <div class="label">Verified Holders</div>
-        </div>
-        <div class="meta-box">
-          <div class="val" id="meta-tvl">$18.4M</div>
-          <div class="label">Total Gold Value Locked</div>
-        </div>
-      </div>
-
-      <div style="margin-top:18px">
-        <a class="cta" id="buyBtn" href="#">BUY LUMI NOW</a>
-        <a class="cta" style="margin-left:12px;background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--gold);" href="#network">View Network</a>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="panel">
-        <div class="chart-wrap panel" id="chart-panel">
-          <canvas id="priceChart" height="180"></canvas>
-        </div>
-        <div style="display:flex;gap:8px;margin-top:6px">
-          <button class="cta" id="simSpike">Simulate Spike</button>
-          <button class="cta ghost" id="downloadCSV">Download CSV</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="dashboard" class="panel stats-section">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div><strong style="font-size:16px">Live Stats</strong><div style="font-size:12px;color:var(--muted)">Simulasi real-time — bisa diganti ke API</div></div>
-      <div style="font-size:12px;color:var(--muted)">Contract: <code style="color:#ddd">0xLUMI... (placeholder)</code></div>
-    </div>
-    <div class="grid-3" style="margin-top:10px">
-      <div class="stat"><div class="num" id="stat-price">$2.45</div><div class="lbl">LUMI Price</div></div>
-      <div class="stat"><div class="num" id="stat-holders">5.3K</div><div class="lbl">Verified Holders</div></div>
-      <div class="stat"><div class="num" id="stat-tvl">$18.4M</div><div class="lbl">Total Gold Value Locked</div></div>
-    </div>
-  </section>
-
-  <section id="network" class="network-wrap">
-    <div class="section-title">🌐 Jaringan Lumi-Verse Real-Time</div>
-    <div class="panel" id="network-panel">
-      <div id="network-visualizer">
-        <canvas id="network-canvas"></canvas>
-        <div id="nodeTooltip" class="node-tooltip"></div>
-      </div>
-      <div style="margin-top:10px;font-size:12px;color:var(--muted)">Hover node untuk info. Klik CORE untuk detail.</div>
-    </div>
-  </section>
-
-  <section id="explorer" style="margin-top:12px">
-    <div class="two-col">
-      <div class="panel explorer">
-        <div style="font-weight:700">Explorer Mini</div>
-        <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Cek alamat/token (simulasi)</div>
-        <input id="explorerInput" placeholder="Masukkan alamat atau tx hash..." />
-        <button id="exploreBtn">Cek</button>
-
-        <div id="explorerResult" style="margin-top:12px;color:var(--muted)"></div>
-      </div>
-
-      <div class="panel">
-        <div style="font-weight:700">Quick Actions</div>
-        <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
-          <a class="cta" id="buyBtn2" href="#" target="_blank">Buy LUMI (DEX)</a>
-          <button class="cta" id="stakeBtn">Stake LUMI (Simulator)</button>
-          <button class="cta ghost" id="daoBtn">DAO Proposals</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="features" style="margin-top:18px">
-    <div class="section-title">✨ Innovation & Utility</div>
-    <div class="feature-grid">
-      <div class="feature-card"><strong>Cross-Chain Gold Trading</strong><p>Perdagangkan LUMI di banyak jaringan.</p></div>
-      <div class="feature-card"><strong>Advanced Trading Suite</strong><p>Orderbook & charts planned.</p></div>
-      <div class="feature-card"><strong>Secure Physical Backing</strong><p>Each token backed by audited gold reserve.</p></div>
-    </div>
-  </section>
-
-  <section id="roadmap" style="margin-top:18px">
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <div style="flex:1">
-        <div class="section-title">Roadmap</div>
-        <ul class="roadmap-list">
-          <li>Q4 2025 — Website live, Whitepaper published, Token deployed</li>
-          <li>Q1 2026 — DEX listing, Liquidity pools, Community airdrop</li>
-          <li>Q2 2026 — Cross-chain bridge, Staking & governance</li>
-          <li>Q3 2026 — Mainnet Lumi-Chain beta, Node release to community</li>
-        </ul>
-      </div>
-      <div style="width:360px">
-        <div class="section-title">Latest News</div>
-        <div class="panel" style="padding:12px">
-          <strong>Announcement:</strong> Lumi whitepaper versi 1.0 diterbitkan. <br><small style="color:var(--muted)">Nov 18, 2025</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="sitefoot">
-  <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>
-        <strong>LUMI-VERSE</strong><br><small style="color:var(--muted)">Built & maintained by the community</small>
-      </div>
-      <div class="socials">
-        <a href="https://x.com/lumiverse" target="_blank">X/Twitter</a>
-        <a href="https://t.me/lumiverse" target="_blank">Telegram</a>
-        <a href="https://github.com/vyragootoglobal-web/lumi-official" target="_blank">GitHub</a>
-      </div>
-    </div>
-
-    <div style="margin-top:12px;color:var(--muted);font-size:13px">
-      <strong>Donation / Devfund:</strong> kaspa:... (example)
-    </div>
-    <div style="margin-top:8px;color:var(--muted)">© 2025 LUMI-VERSE — All rights reserved</div>
-  </div>
-</footer>
-
-<!-- Modals -->
-<div id="daoModal" class="modal centered">
-  <div class="modal-body panel">
-    <button class="close" data-close="daoModal">✕</button>
-    <h3>DAO — Governance</h3>
-    <p class="muted">Proposals, voting, and treasury dashboard will appear here. (simulator)</p>
-    <div id="daoLog"></div>
-  </div>
-</div>
-
-<div id="stakeModal" class="modal centered">
-  <div class="modal-body panel">
-    <button class="close" data-close="stakeModal">✕</button>
-    <h3>Stake LUMI — Simulator</h3>
-    <input id="stakeAmt" placeholder="Amount to stake">
-    <div style="margin-top:10px">
-      <button class="cta" id="doStake">Stake</button>
-      <button class="cta ghost" data-close="stakeModal">Cancel</button>
-    </div>
-    <div id="stakeLog"></div>
-  </div>
-</div>
+<section id="home">
+  <h1>LUMI VERSE</h1>
+  <p>Real-time data loading…</p>
+</section>
 
 <script src="app.js"></script>
 </body>
