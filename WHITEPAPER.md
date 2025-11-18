@@ -1,4 +1,4 @@
-# LUMI — LumiVerse
+# LUMI — LumiZenithVerse
 
 **Token:** LUMI  
 **Contract:** 0x09D85bD22...  
