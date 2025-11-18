@@ -1,67 +1,32 @@
-LUMI VERSE – WHITEPAPER (English)
+# Lumi-Verse Website Package
 
-Executive Summary
-Lumi Verse is a rare, gold-like digital token designed for long-term community value.
+This package contains a full **static** website for the LUMI token (HTML/CSS/JS), a simulated real-time dashboard, a dynamic network visualizer, and helper scripts.
 
-Total Supply: 17,000,000 LUMI
+## Files
+- `index.html` — Main website (single page).
+- `styles.css` — Styles for the site.
+- `app.js` — JavaScript: chart, network visualizer, simulators.
+- `lumi-token.png` — Placeholder logo (you should replace with your PNG).
+- `README.md` — This file.
+- `submission_templates.md` — Templates for CoinGecko / CoinMarketCap submissions.
+- `.github/workflows/deploy.yml` — Example GitHub Actions to publish to GitHub Pages.
 
-Blockchain: Polygon (Ethereum Layer 2)
+## Quick start (local)
+1. Put all files in the same folder.
+2. Open `index.html` in your browser — works locally.
+3. To deploy: push to GitHub repo and enable GitHub Pages (use `/docs` or `gh-pages` branch).
 
-Key Features: Real-time token monitoring, Liquidity Pool, optional governance
+## Replace simulated data with real API
+Replace the simulated `tickPrice()` logic in `app.js` with calls to:
+- Polygonscan API (holders, supply)
+- Covalent / Moralis / TheGraph (price, TVL)
+I can provide example code for each API when you choose which provider.
 
-Mission:
+## Next steps checklist (what I can do next)
+- Integrate real APIs (PolygonScan/Covalent/Moralis/TheGraph).
+- Provide submission package (logos, screenshots, descriptions) for CoinGecko & CoinMarketCap.
+- Create a GitHub Actions workflow to automatically publish to GitHub Pages (sample included).
+- Build a React/Next.js version and add server-side API integration.
 
-Create a rare, high-value token for a global community
+If you want me to push this directly to your GitHub repo, share the repo link (or add me) and I will prepare a PR-ready commit.
 
-Provide transparent, real-time token data
-
-Fully community-driven, inspired by Bitcoin & Ethereum
-
-Tokenomics
-Aspect Details
-
-Token Name Lumi Verse Symbol LUMI Total Supply 17,000,000 LUMI Distribution 100% public, no airdrop Blockchain Polygon Function Gold-like token, long-term investment
-
-Note: Distribution is controlled to maintain rarity. No airdrops are planned.
-
-Purpose & Philosophy
-Gold-like Token: Focus on scarcity and value
-
-Transparency: Transactions can be tracked real-time on Polygon Scan
-
-Community-first: Open-source and public; the community can manage and develop the ecosystem
-
-Blockchain & Infrastructure
-Network: Polygon (Ethereum Layer 2)
-
-Advantages: Low fees, fast transactions, ERC-20 compatible
-
-Nodes & Decentralization: Community can run nodes to keep the project alive
-
-Key Features
-
-Real-Time Token Monitoring: Track supply, transactions, and activity in real-time
-
-Liquidity Pool (LP): Full transparency for DEX integration
-
-Governance (Optional): Community voting for major decisions
-
-Roadmap
-Time Milestone
-
-Q4 2025 Launch Lumi Verse token on Polygon Q1 2026 Official website & real-time token scan Q2 2026 Listing on DEX, DexTools, CMC, CG Q3 2026 Global community launch & node distribution Q4 2026 Optional governance features & upgrades
-
-Contact & Official Sources
-Website: https://vyragootoglobal-web.github.io/lumi-official/
-
-Telegram: t.me/LumiVerseOfficial
-
-Discord: discord.gg/LumiVerse
-
-Conclusion
-Lumi Verse is a rare, gold-like token with a total supply of 17 million LUMI, emphasizing community involvement, transparency, and security. With Polygon's technology, Lumi Verse is positioned as an exclusive digital asset for long-term value.
-
-Note: This whitepaper can be rendered to PDF or hosted on GitHub Pages.
-
-lumi-official
-Official public repository for LUMI Token. LumiApp.jsx
