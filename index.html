@@ -1,26 +1,64 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LUMI Token</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LUMI — LumiVerse</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav>
-  <img src="lumi-token.png" alt="LUMI Logo" class="logo">
-  <button id="hamburger">☰</button>
-  <ul id="nav-menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="whitepaper.md">Whitepaper</a></li>
-    <li><a href="#dashboard">Dashboard</a></li>
-  </ul>
-</nav>
+  <header class="hero">
+    <img src="logo-lumi.png" alt="LUMI Logo" class="logo" />
+    <h1>LUMI — LumiVerse</h1>
+    <p>Gold premium token on Polygon — Supply: 20,000,000</p>
+    <div class="actions">
+      <a href="#buy" class="btn">Buy on QuickSwap</a>
+      <a href="#whitepaper" class="btn ghost">Whitepaper</a>
+    </div>
+  </header>
 
-<section id="home">
-  <h1>LUMI VERSE</h1>
-  <p>Real-time data loading…</p>
-</section>
+  <main class="container">
+    <section id="about">
+      <h2>About LUMI</h2>
+      <p>LUMI is a rare gold-premium token designed to be long-term store-of-value on Polygon network. Total supply: <strong>20,000,000 LUMI</strong>.</p>
+    </section>
 
-<script src="app.js"></script>
+    <section id="token-info">
+      <h3>Token Info</h3>
+      <ul>
+        <li>Contract: <code id="contract">0x09D85bD22E3d0EbfBCd09166d01Ff880fF14a97b</code> <button id="copy">Copy</button></li>
+        <li>Network: Polygon (MATIC)</li>
+        <li>Decimals: 18</li>
+        <li>Total Supply: 20,000,000</li>
+      </ul>
+    </section>
+
+    <section id="price">
+      <h3>Live Price</h3>
+      <div id="price-widget">Price widget loading...</div>
+      <p><small>Chart data from DexScreener — loading may take a few seconds.</small></p>
+    </section>
+
+    <section id="whitepaper">
+      <h3>Whitepaper</h3>
+      <p>Download the full whitepaper in PDF or read online.</p>
+      <a href="whitepaper.md" class="btn">Read Whitepaper (MD)</a>
+    </section>
+
+    <section id="links">
+      <h3>Links</h3>
+      <ul>
+        <li><a href="https://polygonscan.com/token/0x09D85bD22E3d0EbfBCd09166d01Ff880fF14a97b" target="_blank">Polygonscan</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">X (Twitter)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© LUMI — LumiVerse</p>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
