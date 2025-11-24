@@ -1,0 +1,19 @@
+{
+  "genesis_time": "2025-12-01T00:00:00.000Z",
+  "chain_id": "LZVNXE-001",
+  "initial_validators": [
+    { "name": "community", "power": 1, "address": "global" }
+  ],
+  "accounts": [
+    { "address": "community_fund", "balance": 0 }
+  ],
+  "tokens": [
+    { "symbol": "LUMI", "supply": 20000000 },
+    { "symbol": "NXE", "supply": 51000000 }
+  ],
+  "future_proof": {
+    "upgrade_epoch": "3155",
+    "quantum_resistance": true,
+    "anti_rollback": true
+  }
+}
