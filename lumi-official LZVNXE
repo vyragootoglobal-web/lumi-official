@@ -1,0 +1,6 @@
+lumi-official/
+│
+├─ config.toml
+├─ genesis.json
+├─ start-node.sh
+└─ README.md
