@@ -1,0 +1,5 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+<path style="fill:#f59d01; stroke:none;" d="M0 0L0 32L32 32L32 0L18 0C17.5281 10.9636 16.0339 23.054 7 30C9.35549 20.4387 11.5774 9.84213 12 0L0 0z"/>
+<path style="fill:#fffffe; stroke:none;" d="M12 0C11.2092 10.0059 8.85865 20.1351 7 30C16.7688 24.886 17.7908 10.1368 18 0L12 0M9 31L26 31L27 26C19.966 26 13.6644 24.8775 9 31z"/>
+</svg>
