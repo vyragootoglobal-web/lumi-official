@@ -1,0 +1,22 @@
+chain_name = "LumiZenithVerse-Nexorae"
+network_id = "LZVNXE-001"
+protocol_version = "1.0.4"
+
+# Anti-Quantum & Keamanan Tinggi
+signature = "Dilithium5"     # NIST PQC
+hash = "SHA3-512"
+merkle_tree = "Zero-Knowledge Sparse Tree"
+
+block_time = "3s"
+max_block_size = "4MB"
+finality_type = "Delegated-PoS"
+minimum_stake = 1000
+
+tokens = [
+  { symbol = "LUMI", supply = 20000000 },
+  { symbol = "NXE", supply = 51000000 }
+]
+
+governance = "community_dao"
+halving_interval_years = 5
+reward_percentage = 5
